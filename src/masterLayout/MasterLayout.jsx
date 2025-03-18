@@ -138,6 +138,18 @@ const MasterLayout = ({ children }) => {
                 <span>DashBoard</span>
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to='/bookings'
+                className={(navData) => (navData.isActive ? "active-page" : "")}
+              >
+                <Icon
+                  icon='solar:home-smile-angle-outline'
+                  className='menu-icon'
+                />
+                <span>Bookings</span>
+              </NavLink>
+            </li>
 
             
 
@@ -145,6 +157,99 @@ const MasterLayout = ({ children }) => {
            
 
             {/* Services dropdown */}
+            <li className='dropdown'>
+              <Link to='#'>
+                <Icon
+                  icon='flowbite:users-group-outline'
+                  className='menu-icon'
+                />
+                <span>Services</span>
+              </Link>
+              <ul className='sidebar-submenu'>
+                <li>
+                  <NavLink
+                    to='/salon'
+                    className={(navData) =>
+                      navData.isActive ? "active-page" : ""
+                    }
+                  >
+                    <i className='ri-circle-fill circle-icon text-primary-600 w-auto' />{" "}
+                    Salon
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to='/sport-ground'
+                    className={(navData) =>
+                      navData.isActive ? "active-page" : ""
+                    }
+                  >
+                    <i className='ri-circle-fill circle-icon text-warning-main w-auto' />{" "}
+                    Sport Ground
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to='/parcel-delivery'
+                    className={(navData) =>
+                      navData.isActive ? "active-page" : ""
+                    }
+                  >
+                    <i className='ri-circle-fill circle-icon text-warning-main w-auto' />{" "}
+                    Parcel & Delivery
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to='/electrician'
+                    className={(navData) =>
+                      navData.isActive ? "active-page" : ""
+                    }
+                  >
+                    <i className='ri-circle-fill circle-icon text-warning-main w-auto' />{" "}
+                    Electrician
+                  </NavLink>
+                </li>
+                
+              </ul>
+            </li>
+
+
+             {/* Users Dropdown */}
+             <li className='dropdown'>
+              <Link to='#'>
+                <Icon
+                  icon='flowbite:users-group-outline'
+                  className='menu-icon'
+                />
+                <span>Our Application</span>
+              </Link>
+              <ul className='sidebar-submenu'>
+                <li>
+                  <NavLink
+                    to='/nnvoices'
+                    className={(navData) =>
+                      navData.isActive ? "active-page" : ""
+                    }
+                  >
+                    <i className='ri-circle-fill circle-icon text-primary-600 w-auto' />{" "}
+                    Invoices
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to='/community'
+                    className={(navData) =>
+                      navData.isActive ? "active-page" : ""
+                    }
+                  >
+                    <i className='ri-circle-fill circle-icon text-warning-main w-auto' />{" "}
+                    Community
+                  </NavLink>
+                </li>
+                
+              </ul>
+            </li>
 
             
            
@@ -153,7 +258,7 @@ const MasterLayout = ({ children }) => {
           
 
             {/* Invoice Dropdown */}
-            <li className='dropdown'>
+            {/* <li className='dropdown'>
               <Link to='#'>
                 <Icon icon='hugeicons:invoice-03' className='menu-icon' />
                 <span>Invoice</span>
@@ -204,10 +309,10 @@ const MasterLayout = ({ children }) => {
                   </NavLink>
                 </li>
               </ul>
-            </li>
+            </li> */}
 
             {/* Components Dropdown */}
-            <li className='dropdown'>
+            {/* <li className='dropdown'>
               <Link to='#'>
                 <Icon
                   icon='solar:document-text-outline'
@@ -448,10 +553,10 @@ const MasterLayout = ({ children }) => {
                   </NavLink>
                 </li>
               </ul>
-            </li>
+            </li> */}
 
             {/* Forms Dropdown */}
-            <li className='dropdown'>
+            {/* <li className='dropdown'>
               <Link to='#'>
                 <Icon icon='heroicons:document' className='menu-icon' />
                 <span>Forms</span>
@@ -502,7 +607,7 @@ const MasterLayout = ({ children }) => {
                   </NavLink>
                 </li>
               </ul>
-            </li>
+            </li> */}
 
            
 
@@ -510,11 +615,11 @@ const MasterLayout = ({ children }) => {
 
             <li>
               <NavLink
-                to='/widgets'
+                to='/promotions-ads'
                 className={(navData) => (navData.isActive ? "active-page" : "")}
               >
                 <Icon icon='fe:vector' className='menu-icon' />
-                <span>Widgets</span>
+                <span>Promotions & Ads</span>
               </NavLink>
             </li>
 
@@ -531,41 +636,7 @@ const MasterLayout = ({ children }) => {
               </NavLink>
             </li>
 
-            {/* Users Dropdown */}
-            <li className='dropdown'>
-              <Link to='#'>
-                <Icon
-                  icon='flowbite:users-group-outline'
-                  className='menu-icon'
-                />
-                <span>Contacts</span>
-              </Link>
-              <ul className='sidebar-submenu'>
-                <li>
-                  <NavLink
-                    to='/users-list'
-                    className={(navData) =>
-                      navData.isActive ? "active-page" : ""
-                    }
-                  >
-                    <i className='ri-circle-fill circle-icon text-primary-600 w-auto' />{" "}
-                    Vendor Contacts
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to='/users-grid'
-                    className={(navData) =>
-                      navData.isActive ? "active-page" : ""
-                    }
-                  >
-                    <i className='ri-circle-fill circle-icon text-warning-main w-auto' />{" "}
-                    Customer Contacts
-                  </NavLink>
-                </li>
-                
-              </ul>
-            </li>
+           
 
 
 
@@ -724,6 +795,160 @@ const MasterLayout = ({ children }) => {
               </NavLink>
             </li>
 
+
+
+
+ {/* Settings dropdown */}
+ <li className='dropdown'>
+              <Link to='#'>
+                <Icon
+                  icon='flowbite:users-group-outline'
+                  className='menu-icon'
+                />
+                <span>Settings</span>
+              </Link>
+              <ul className='sidebar-submenu'>
+                <li>
+                  <NavLink
+                    to='/roles-permissions'
+                    className={(navData) =>
+                      navData.isActive ? "active-page" : ""
+                    }
+                  >
+                    <i className='ri-circle-fill circle-icon text-primary-600 w-auto' />{" "}
+                    Roles & Permissions
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to='/my-dashboard'
+                    className={(navData) =>
+                      navData.isActive ? "active-page" : ""
+                    }
+                  >
+                    <i className='ri-circle-fill circle-icon text-warning-main w-auto' />{" "}
+                    My Dashboard
+                  </NavLink>
+                </li>
+                
+                
+               
+                
+                
+              </ul>
+            </li>
+            
+ {/* Transactions dropdown */}
+ <li className='dropdown'>
+              <Link to='#'>
+                <Icon
+                  icon='flowbite:users-group-outline'
+                  className='menu-icon'
+                />
+                <span>Transactions</span>
+              </Link>
+              <ul className='sidebar-submenu'>
+                <li>
+                  <NavLink
+                    to='/payment-gateway'
+                    className={(navData) =>
+                      navData.isActive ? "active-page" : ""
+                    }
+                  >
+                    <i className='ri-circle-fill circle-icon text-primary-600 w-auto' />{" "}
+                    Payment Gateway
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to='/completed-transactions'
+                    className={(navData) =>
+                      navData.isActive ? "active-page" : ""
+                    }
+                  >
+                    <i className='ri-circle-fill circle-icon text-warning-main w-auto' />{" "}
+                    Completed Transactions
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to='/failed-transactions'
+                    className={(navData) =>
+                      navData.isActive ? "active-page" : ""
+                    }
+                  >
+                    <i className='ri-circle-fill circle-icon text-warning-main w-auto' />{" "}
+                    Failed Transactions
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to='/payout-request'
+                    className={(navData) =>
+                      navData.isActive ? "active-page" : ""
+                    }
+                  >
+                    <i className='ri-circle-fill circle-icon text-warning-main w-auto' />{" "}
+                    Payout Request
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to='/refund-request'
+                    className={(navData) =>
+                      navData.isActive ? "active-page" : ""
+                    }
+                  >
+                    <i className='ri-circle-fill circle-icon text-warning-main w-auto' />{" "}
+                    Refund Request
+                  </NavLink>
+                </li>
+                
+                
+              </ul>
+            </li>
+
+
+
+             {/* SMS Gateway dropdown */}
+ <li className='dropdown'>
+              <Link to='#'>
+                <Icon
+                  icon='flowbite:users-group-outline'
+                  className='menu-icon'
+                />
+                <span>SMS Gateway</span>
+              </Link>
+              <ul className='sidebar-submenu'>
+                <li>
+                  <NavLink
+                    to='/sms-gateway'
+                    className={(navData) =>
+                      navData.isActive ? "active-page" : ""
+                    }
+                  >
+                    <i className='ri-circle-fill circle-icon text-primary-600 w-auto' />{" "}
+                    SMS Gateway
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to='/sms-logs'
+                    className={(navData) =>
+                      navData.isActive ? "active-page" : ""
+                    }
+                  >
+                    <i className='ri-circle-fill circle-icon text-warning-main w-auto' />{" "}
+                    SMS Logs
+                  </NavLink>
+                </li>
+                
+                
+               
+                
+                
+              </ul>
+            </li>
             
 
             
